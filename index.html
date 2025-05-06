@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <title>Site Mario Bros</title>
+</head>
+
+<body>
+    <div class="mascara-form" onclick="hideForm()"></div>
+
+    <header>
+        <img src="./assets/logo-header.png" class="logo-header" />
+        <a>Home</a>
+        <a onclick="showForm()">Fale Conosco</a>
+        <a href="./nossos-servicos.html">Nossos Serviços</a>
+    </header>
+
+    <div class="container">
+        <div class="background">
+            <video loop autoplay muted class="conteudo-background ">
+                <source src="./assets/video.mp4">
+            </video>
+            <!-- <img src="./assets/backgroud.jpeg" class="conteudo-background"/> -->
+            <div class="mascara-video"></div>
+        </div>
+                
+        <div class="sobre-nos">
+            <img src="./assets/logo.png" class="logo">
+            <p>
+                No novo filme Super Mario Bros., Mario e Luigi são transportados para um universo mágico e cheio de desafios, onde precisam unir forças com a Princesa Peach e Toad para derrotar o temido Bowser e salvar o Reino Cogumelo.
+              </p>
+              
+              <p>
+                Com muita ação, humor e nostalgia, o filme traz elementos clássicos dos jogos da Nintendo e apresenta uma aventura épica para toda a família. Prepare-se para uma jornada emocionante cheia de blocos, moedas e personagens inesquecíveis!
+              </p>
+              
+              <button class="botao-animado" onclick="showForm()">Entre em Contato</button>
+
+        </div>
+
+        <img src="./assets/mario.png" class="mario">
+        <a class="whatsapp"><img src="./assets/whatsapp.png" /></a>
+
+        <form action="https://formsubmit.co/contato@rodolfomori.com" method="POST" class="fale-conosco">
+            <h2>Fale Conosco</h2>
+            <p>Preencha o formulário abaixo e entraremos em contato o mais rápido possível!</p>
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="message" placeholder="Digite sua mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+        
+        <style>
+            .fale-conosco {
+                position: fixed;
+                top: 50%;
+                left: -400px;
+                transform: translateY(-50%);
+                width: 250px;
+                background-color: rgba(0, 0, 0, 0.9);
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                transition: all 0.6s ease;
+                z-index: 1000;
+                color: white;
+                font-family: 'Mukta', sans-serif;
+            }
+        
+            .fale-conosco h2 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                color: #ffcc00;
+                text-align: center;
+            }
+        
+            .fale-conosco p {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+                text-align: center;
+                color: #ffffff;
+            }
+        
+            .fale-conosco input,
+            .fale-conosco textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                background-color: #f4f4f4;
+            }
+        
+            .fale-conosco textarea {
+                resize: none;
+                height: 30px;
+            }
+        
+            .fale-conosco button {
+                width: 100%;
+                padding: 10px;
+                font-size: 1rem;
+                color: white;
+                background-color: #ff4500;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.9s ease;
+            }
+        
+            .fale-conosco button:hover {
+                background-color: #e03e00;
+            }
+        
+            .mascara-form {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                visibility: hidden;
+                z-index: 999;
+            }
+        
+            .mascara-form.visible {
+                visibility: visible;
+            }
+        </style>
+        
+        <script>
+            const form = document.querySelector('.fale-conosco');
+            const background = document.querySelector('.mascara-form');
+        
+            function showForm() {
+                form.style.left = '50%';
+                form.style.transform = 'translateX(-50%)';
+                background.classList.add('visible');
+            }
+        
+            function hideForm() {
+                form.style.left = '-400px';
+                form.style.transform = 'translateX(0)';
+                background.classList.remove('visible');
+            }
+        </script>
+</script>
+
+</html>

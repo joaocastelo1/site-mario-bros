@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Nossos Serviços - Mario Bros</title>
+  <style>
+    body {
+      font-family: 'Mukta', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('./assets/cogumelos.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .servicos {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .servicos h1 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 5px black;
+      color: #ffcc00;
+    }
+
+    .servicos-lista {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .servico {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .servico:hover {
+      transform: scale(1.05);
+    }
+
+    .servico img {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+
+    .servico h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #ffcc00;
+    }
+
+    .servico p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: white;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      color: white;
+      background-color: #ff0000;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .botao-voltar:hover {
+      background-color: #cc0000;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="servicos">
+    <h1>Nossos Serviços</h1>
+    <div class="servicos-lista">
+      <div class="servico">
+        <img src="./assets/encanamento.png" alt="Ícone de encanamento">
+        <h2>Conserto de Encanamento</h2>
+        <p>
+          🔧 Resolvemos vazamentos, desentupimentos e toda a manutenção hidráulica com agilidade e confiança — chame o Mario Bros e diga adeus aos problemas!
+        </p>
+      </div>
+      <div class="servico">
+        <img src="./assets/ermegencia.png" alt="Ícone de atendimento emergencial">
+        <h2>Atendimento 24h</h2>
+        <p>
+          🚨 Atendimento rápido com o Mario Bros! Chame agora e resolvemos seu problema com estilo e agilidade! 🍄🔧
+        </p>
+      </div>
+    </div>
+    <a href="index.html" class="botao-voltar">Voltar para Página Inicial</a>
+  </section>
+</body>
+
+</html>
